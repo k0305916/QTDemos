@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>982</width>
-    <height>309</height>
+    <width>1024</width>
+    <height>680</height>
    </rect>
   </property>
   <property name="font">
@@ -18,78 +18,8 @@
   <property name="windowTitle">
    <string>产品ID流水号自动控制器</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_3" columnstretch="1,2">
-   <item row="1" column="1">
-    <widget class="QPushButton" name="WriteBtn">
-     <property name="text">
-      <string>写入</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="1">
-    <widget class="QGroupBox" name="groupBox_2">
-     <property name="title">
-      <string>产品ID操作</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_4">
-      <item row="0" column="0">
-       <layout class="QGridLayout" name="gridLayout_2" columnstretch="5,1,0,1" columnminimumwidth="0,0,0,0">
-        <item row="1" column="1">
-         <widget class="QTextEdit" name="textEdit_2">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1" alignment="Qt::AlignHCenter">
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string>批次号</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="3" alignment="Qt::AlignHCenter">
-         <widget class="QLabel" name="label_5">
-          <property name="text">
-           <string>流水号</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="3">
-         <widget class="QTextEdit" name="textEdit_3">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0" alignment="Qt::AlignHCenter">
-         <widget class="QLabel" name="label_6">
-          <property name="text">
-           <string>型号</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QListView" name="listView"/>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="0" column="0">
+  <layout class="QGridLayout" name="gridLayout_3" columnstretch="1,0,3">
+   <item row="0" column="0" rowspan="2" colspan="2">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
       <string>串口操作</string>
@@ -99,15 +29,21 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>301</width>
-        <height>219</height>
+        <width>231</width>
+        <height>71</height>
        </rect>
       </property>
-      <layout class="QGridLayout" name="gridLayout" columnstretch="2,0">
-       <item row="1" column="0" alignment="Qt::AlignHCenter">
-        <widget class="QLabel" name="label">
+      <layout class="QGridLayout" name="gridLayout" columnstretch="2,1">
+       <item row="1" column="1" alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="text">
-          <string>串口号</string>
+          <string>波特率</string>
          </property>
         </widget>
        </item>
@@ -125,26 +61,26 @@
          </item>
         </widget>
        </item>
-       <item row="1" column="1" alignment="Qt::AlignHCenter">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>波特率</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QPlainTextEdit" name="plainTextEdit">
+       <item row="1" column="0" alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="label">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="text">
+          <string>串口号</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="text">
+          <string>115200</string>
+         </property>
          <property name="readOnly">
           <bool>true</bool>
-         </property>
-         <property name="plainText">
-          <string>115200</string>
          </property>
         </widget>
        </item>
@@ -153,8 +89,8 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>180</y>
+        <x>10</x>
+        <y>130</y>
         <width>231</width>
         <height>29</height>
        </rect>
@@ -178,29 +114,114 @@
      </widget>
     </widget>
    </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>产品ID读取操作</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_7">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>产品ID</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="IDReadEdit">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>读取</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="2" rowspan="3">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>产品ID写入操作</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout_2" columnstretch="3,1,1,0,0" columnminimumwidth="0,0,0,0,0">
+        <item row="1" column="0">
+         <widget class="QListView" name="listView"/>
+        </item>
+        <item row="0" column="1" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>批次号</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>型号</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" alignment="Qt::AlignTop">
+         <widget class="QLineEdit" name="lineEdit_2"/>
+        </item>
+        <item row="0" column="2" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>流水号</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" alignment="Qt::AlignTop">
+         <widget class="QLineEdit" name="lineEdit_3">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="3">
+         <widget class="QPushButton" name="WriteBtn">
+          <property name="text">
+           <string>写入</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
   </layout>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>110</y>
-     <width>54</width>
-     <height>12</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
   <tabstop>listView</tabstop>
-  <tabstop>WriteBtn</tabstop>
   <tabstop>ConnectBtn</tabstop>
   <tabstop>comboBox</tabstop>
-  <tabstop>textEdit_3</tabstop>
-  <tabstop>textEdit_2</tabstop>
   <tabstop>DisConnectBtn</tabstop>
  </tabstops>
  <resources/>
